@@ -26,6 +26,7 @@ h1 {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+    
 }
 
 .time { 
@@ -37,6 +38,7 @@ h1 {
 .date {
     opacity: 0.7;
     margin-top: 0px;
+    border-bottom: 1px dashed grey;
 }
 
 h2 {
