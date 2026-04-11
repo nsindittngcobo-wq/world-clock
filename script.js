@@ -10,6 +10,13 @@ durbanTimeElement.innerHTML = moment()
   .format("hh:mm:ss [<small>]A[</small>]");
 let durbanDateElement = document.querySelector("#dbn-date");
 durbanDateElement.innerHTML = moment().format("dddd, MMMM Do YYYY");
+
+let melbourneTimeElement = document.querySelector("#melbourne");
+melbourneTimeElement.innerHTML = moment()
+  .tz("Australia/Melbourne")
+  .format("hh:mm:ss [<small>]A[</small>]");
+let melbourneDateElement = document.querySelector("#mel-date");
+melbourneDateElement.innerHTML = moment().format("dddd, MMMM Do YYYY");
 }
 
 let cityInterval = null;
@@ -34,7 +41,9 @@ function showCityTime(){
 </div>
 <div class="date">${cityTime.format("dddd, MMMM Do YYYY")}</div>
 </div>
-</div>`;
+</div>
+<a href = "index.html"> All cities </a> 
+`;
 }
 
 showCityTime();
