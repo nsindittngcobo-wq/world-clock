@@ -19,7 +19,9 @@ function updateTime(event) {
 clearInterval(cityInterval);
 
 function showCityTime(){
-    if (!cityTimeZone) return;
+    if (cityTimeZone === "current") {
+        cityTimeZone = moment.tz.guess();
+    }
 
     let cityName = cityTimeZone.replace("_", " ").split("/")[1];
     let cityTime = moment().tz(cityTimeZone);
